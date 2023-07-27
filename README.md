@@ -56,6 +56,3 @@ If you find the code helpful in your resarch or work, please cite the following 
   journal={arXiv preprint arXiv:2301.08957},
   year={2023}
 }
-
-
-```
