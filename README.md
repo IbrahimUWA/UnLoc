@@ -56,11 +56,9 @@ If you find the code helpful in your resarch or work, please cite the following 
   journal={arXiv preprint arXiv:2301.08957},
   year={2023}
 }
-}
 
-@article{Anwar2020IERD,
-  author = {Anwar, Saeed and Huynh, Cong P. and Porikli, Fatih },
-    title = {Identity Enhanced Image Denoising},
+
+
     journal={IEEE Computer Vision and Pattern Recognition Workshops (CVPRW)},
     year={2020}
 }
