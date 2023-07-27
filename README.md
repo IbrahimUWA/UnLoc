@@ -58,8 +58,4 @@ If you find the code helpful in your resarch or work, please cite the following 
 }
 
 
-
-    journal={IEEE Computer Vision and Pattern Recognition Workshops (CVPRW)},
-    year={2020}
-}
 ```
