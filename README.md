@@ -52,6 +52,12 @@ Schematics for common ground-truth generation for the different types of input s
 - tqdm 
 - scikit-image
 ### Installation of SPCONV 1.2.1
+  git clone https://github.com/traveller59/spconv.git --recursive -b v1.2.1
+  cd spconv/
+  sudo apt-get install libboost-all-dev
+  python setup.py bdist_wheel
+  cd dist and pip install spconv-1.2.1-cp38-cp38-linux_x86_64.whl
+
 
 ---
 
