@@ -37,14 +37,18 @@ Schematics for common ground-truth generation for the different types of input s
 
 
 ## Requirements
-- PyTorch >= 1.2
+- PyTorch >= 1.8.0
 - Tested on Ubuntu 18.04 environment 
 - torchvision=0.2.1
 - SPCONV 1.2.1
-- python 3.8
-- CUDA 10.2
+- python 3.8.1
+- CUDA 11.0
 - pillow
+- numba 0.58.1
+- numpy 1.22.0                                       
 - torch-scatter
+- scikit-learn 1.3.0
+- scipy 1.8.1 
 - tqdm 
 - scikit-image
 
