@@ -51,7 +51,7 @@ Schematics for common ground-truth generation for the different types of input s
 - scipy 1.8.1 
 - tqdm 
 - scikit-image
-# Installation of SPCONV 1.2.1
+### Installation of SPCONV 1.2.1
 
 ---
 
