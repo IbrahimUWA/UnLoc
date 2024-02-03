@@ -51,7 +51,9 @@ Schematics for common ground-truth generation for the different types of input s
 ---
 
 ---
-## Code will be available soon. 
+## Code and Trained Models
+Download the trained models and code of our paper from [here](https://drive.google.com/file/d/1hc778vA2NTmGwKNHrklTi57zBr7GQVNk/view?usp=drive_link). Total size is 1.31 GB.
+
 ## Citation
 If you find the code helpful in your resarch or work, please cite the following papers.
 ```
