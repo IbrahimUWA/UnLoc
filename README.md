@@ -19,7 +19,7 @@ Localization is a fundamental task in robotics for autonomous navigation. Existi
 
 Architecture of the proposed UnLoc. Top: stream of layers of our network processes 3D point cloud data. It transforms the input into a cylindrical representation which is processed by sparse 3D convolution blocks,  CB and CBD, to extract point cloud features. These features are passed through 3DMax and 3DAvg layers to compute the feature vectors. Middle: stream of the network processes images to extract features with ResNet blocks, which are further processed by our fine tuning and a transformer based features filtering module. Bottom: stream processes Radar modality and has the same architecture as the middle stream, except with an additional 2D Conv layer. Feature vectors for each modality are encoded by our  learnable modality encoding scheme which passes the features to a Regression Module for 6DoF poses prediction.
 <p align="center">
-  <img width="500" src="https://github.com/IbrahimUWA/UnLoc/blob/main/figs/PaperFig7.PNG">
+  <img width="800" src="https://github.com/IbrahimUWA/UnLoc/blob/main/figs/PaperFig7.PNG">
 </p>
 
 Schematics for common ground-truth generation for the different types of input sensors namely, Radar, Camera and LiDAR which operate at 4, 16 and 20 frames per second, respectively.
