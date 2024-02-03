@@ -38,7 +38,7 @@ Schematics for common ground-truth generation for the different types of input s
 
 ## Requirements
 - PyTorch >= 1.8.0
-- Tested on Ubuntu 18.04 environment 
+- Tested on Ubuntu 18.04 
 - torchvision=0.2.1
 - SPCONV 1.2.1
 - python 3.8.1
@@ -51,6 +51,7 @@ Schematics for common ground-truth generation for the different types of input s
 - scipy 1.8.1 
 - tqdm 
 - scikit-image
+# Installation of SPCONV 1.2.1
 
 ---
 
