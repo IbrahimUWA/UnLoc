@@ -14,6 +14,28 @@ This repository is for UnLoc, a novel unified neural modeling approach for local
 ## Introduction
 Localization is a fundamental task in robotics for autonomous navigation. Existing localization methods rely on a single input data modality or train several computational models to process different modalities. This leads to stringent computational requirements and sub-optimal results that fail to capitalize on the complementary information in other data streams. This paper proposes UnLoc, a novel unified neural modeling approach for localization with multi-sensor input in all weather conditions. Our multi-stream network can handle LiDAR, Camera and RADAR inputs for localization on demand, i.e., it can work with one or more input sensors, making it robust to sensor failure. UnLoc uses 3D sparse convolutions and cylindrical partitioning of the space to process LiDAR frames and implements ResNet blocks with a slot attention-based feature filtering module for the Radar and image modalities. We introduce a unique learnable modality encoding scheme to distinguish between the input sensor data. Our method is extensively evaluated on Oxford Radar RobotCar, ApolloSouthBay and Perth-WA datasets. The results ascertain the efficacy of our technique.
 
+
+
+
+Architecture of the proposed UnLoc. Top: stream of layers of our network processes 3D point cloud data. It transforms the input into a cylindrical representation which is processed by sparse 3D convolution blocks,  CB and CBD, to extract point cloud features. These features are passed through 3DMax and 3DAvg layers to compute the feature vectors. Middle: stream of the network processes images to extract features with ResNet blocks, which are further processed by our fine tuning and a transformer based features filtering module. Bottom: stream processes Radar modality and has the same architecture as the middle stream, except with an additional 2D Conv layer. Feature vectors for each modality are encoded by our  learnable modality encoding scheme which passes the features to a Regression Module for 6DoF poses prediction.
+<p align="center">
+  <img width="500" src="https://github.com/IbrahimUWA/UnLoc/blob/main/figs/PaperFig7.PNG">
+</p>
+
+Schematics for common ground-truth generation for the different types of input sensors namely, Radar, Camera and LiDAR which operate at 4, 16 and 20 frames per second, respectively.
+<p align="center">
+  <img width="500" src="https://github.com/IbrahimUWA/UnLoc/blob/main/figs/groundtruthgeneration4.PNG">
+</p>
+
+<p align="center">
+  <img width="500" src="https://github.com/IbrahimUWA/UnLoc/blob/main/figs/radarfig.PNG">
+</p>
+
+<p align="center">
+  <img width="500" src="https://github.com/IbrahimUWA/UnLoc/blob/main/figs/tables.PNG">
+</p>
+
+
 ## Requirements
 - PyTorch >= 1.2
 - Tested on Ubuntu 18.04 environment 
