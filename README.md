@@ -70,9 +70,20 @@ Unloc is trained and tested under an Anaconda environment on Ubuntu 18.04 and us
 
 ## Oxford Radar RobotCar Dataset
 We utilize Oxford Radar Robotcar dataset for our proposed multiple modality localization method. The dataset includes three different modalities: RGB camera images, Radar data, and point clouds from six sensors: left, right, and rear cameras; a Navtech CTS350-XFMCW Radar scanner; and left and right Velodyne HDL-32E LiDAR. NovAtel SPAN-CPT ALIGN inertial (INS) and GPS navigation systems are used to collect the ground-truth poses for this dataset. It covers a total of 280km of urban area, including more than 30 sequences, each captured over 9km. This dataset is large and challenging for localization due to the presence of a variety of foreground objects, such as people and cars. We use the same training and test sequences as Radarloc for our experiments on this dataset.
-Download the Oxford Radar RobotCar dataset from [here](https://oxford-robotics-institute.github.io/radar-robotcar-dataset/datasets). <br>
+The Oxford Radar RobotCar datasetcan be downloaded from [here](https://oxford-robotics-institute.github.io/radar-robotcar-dataset/datasets). Here is the structure of the subfolders for the Oxford Radar Robotcar dataset. Please download all these folders from the dataset. Each subfolder must contain the files and folders as depicted in the image below. <br>
 
-Please download all the files from [here](https://drive.google.com/file/d/1plCxw_Ek-W8u8HqXd4yJWZmYLUkHRUfM/view?usp=drive_link) and place in the Oxford Radar dataset folder.
+The structure of the subfolders for the Oxford Radar Robotcar dataset.
+<p align="center">
+  <img width="500" src="https://github.com/IbrahimUWA/UnLoc/blob/main/figs/Oxford-Radar-Dataset-Structure.PNG">
+</p>
+
+Files and folders within each subfolder of the Oxford Radar Robotcar dataset.
+<p align="center">
+  <img width="500" src="https://github.com/IbrahimUWA/UnLoc/blob/main/figs/Folders-within-each-folder.PNG">
+</p>
+
+
+Please download all the utility files for Oxford Radar dataset from [here](https://drive.google.com/file/d/1plCxw_Ek-W8u8HqXd4yJWZmYLUkHRUfM/view?usp=drive_link) and place in the Oxford Radar dataset folder.
 
 ## Citation
 If you find the code helpful in your resarch or work, please cite the following papers.
