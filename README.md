@@ -68,6 +68,11 @@ Download the trained models and code of our paper from [here](https://drive.goog
 ### Important Note
 Unloc is trained and tested under an Anaconda environment on Ubuntu 18.04 and using PyCharm. Therefore, it is highly recommended to use the Anaconda environment and PyCharm to run Unloc. Please install all the required packages using both pip and conda. A complete list of software packages installed to run Unloc is included in this GitHub package. Please check the file named 'List of installed packages for Unloc". Please use Unloc-Train.py for training and Unloc-Test1.py or Unloc-Test2.py for testing as shown in Figure below.
 
+Using Pycharm with Anaconda environment to run Unloc for both training and testing.
+<p align="center">
+  <img width="800" src="https://github.com/IbrahimUWA/UnLoc/blob/main/figs/Unloc-Pycharm-Anaconda">
+</p>
+
 ## Datasets
 ### Oxford Radar RobotCar Dataset
 We utilize Oxford Radar Robotcar dataset for our proposed multiple modality localization method. The dataset includes three different modalities: RGB camera images, Radar data, and point clouds from six sensors: left, right, and rear cameras; a Navtech CTS350-XFMCW Radar scanner; and left and right Velodyne HDL-32E LiDAR. NovAtel SPAN-CPT ALIGN inertial (INS) and GPS navigation systems are used to collect the ground-truth poses for this dataset. It covers a total of 280km of urban area, including more than 30 sequences, each captured over 9km. This dataset is large and challenging for localization due to the presence of a variety of foreground objects, such as people and cars. We use the same training and test sequences as Radarloc for our experiments on this dataset.
