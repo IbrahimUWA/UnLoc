@@ -25,7 +25,7 @@ Architecture of the proposed UnLoc. Top: stream of layers of our network process
 
 Schematics for common ground-truth generation for the different types of input sensors namely, Radar, Camera and LiDAR which operate at 4, 16 and 20 frames per second, respectively.
 <p align="center">
-  <img width="800" src="https://github.com/IbrahimUWA/UnLoc/blob/main/figs/groundtruthgeneration4.PNG">
+  <img width="900" src="https://github.com/IbrahimUWA/UnLoc/blob/main/figs/groundtruthgeneration4.PNG">
 </p>
 Radar sensor output in polar form (Left) and after transformation to Cartesian coordinates (Right).
 <p align="center">
