@@ -15,8 +15,6 @@ This repository is for UnLoc, a novel unified neural modeling approach for local
 Localization is a fundamental task in robotics for autonomous navigation. Existing localization methods rely on a single input data modality or train several computational models to process different modalities. This leads to stringent computational requirements and sub-optimal results that fail to capitalize on the complementary information in other data streams. This paper proposes UnLoc, a novel unified neural modeling approach for localization with multi-sensor input in all weather conditions. Our multi-stream network can handle LiDAR, Camera and RADAR inputs for localization on demand, i.e., it can work with one or more input sensors, making it robust to sensor failure. UnLoc uses 3D sparse convolutions and cylindrical partitioning of the space to process LiDAR frames and implements ResNet blocks with a slot attention-based feature filtering module for the Radar and image modalities. We introduce a unique learnable modality encoding scheme to distinguish between the input sensor data. Our method is extensively evaluated on Oxford Radar RobotCar, ApolloSouthBay and Perth-WA datasets. The results ascertain the efficacy of our technique.
 
 
-
-
 Architecture of the proposed UnLoc. Top: stream of layers of our network processes 3D point cloud data. It transforms the input into a cylindrical representation which is processed by sparse 3D convolution blocks,  CB and CBD, to extract point cloud features. These features are passed through 3DMax and 3DAvg layers to compute the feature vectors. Middle: stream of the network processes images to extract features with ResNet blocks, which are further processed by our fine tuning and a transformer based features filtering module. Bottom: stream processes Radar modality and has the same architecture as the middle stream, except with an additional 2D Conv layer. Feature vectors for each modality are encoded by our  learnable modality encoding scheme which passes the features to a Regression Module for 6DoF poses prediction.
 <p align="center">
   <img width="1000" src="https://github.com/IbrahimUWA/UnLoc/blob/main/figs/PaperFig7.PNG">
@@ -26,10 +24,12 @@ Schematics for common ground-truth generation for the different types of input s
 <p align="center">
   <img width="800" src="https://github.com/IbrahimUWA/UnLoc/blob/main/figs/groundtruthgeneration4.PNG">
 </p>
-
+Radar sensor output in polar form (Left) and after transformation to Cartesian coordinates (Right).
 <p align="center">
   <img width="500" src="https://github.com/IbrahimUWA/UnLoc/blob/main/figs/radarfig.PNG">
 </p>
+
+Table I: MEAN TRANSLATION (METERS) AND ROTATION (DEG.) ERRORS ON THE RADAR ROBOTCAR DATASET[11] COMPARED TO RADAR SLAM[32], ADAPTED ATLOC[28], RADARLOC[10], ATLOC[28], MAPNET[19], POSENET[7], DCP[33], VLAD[34] AND POINTLOC[5] .Table II: ABLATION STUDY ON TEST SEQUENCES OF OXFORD RADAR ROBOTCAR. MEAN TRANSLATION (METERS) AND ROTATION (DEG.) ERRORS ARE REPORTED FOR THE 3 MODALITIES SEPARATELY AND IN COMBINATIONS. L1/L2, C1/C2/C3 & R STAND FOR LIDAR LEFT/RIGHT, CAMERA LEFT/RIGHT/REAR & RADAR. WE REPORT RESULTS FOR C1 ONLY SINCE ALL THREE CAMERAS GIVE APPROXIMATELY SIMILAR ACCURACY.
 
 <p align="center">
   <img width="1000" src="https://github.com/IbrahimUWA/UnLoc/blob/main/figs/tables.PNG">
@@ -65,10 +65,10 @@ pip install --no-index torch-scatter -f https://pytorch-geometric.com/whl/torch-
 ## Code and Trained Models
 Download the trained models and code of our paper from [here](https://drive.google.com/file/d/1hc778vA2NTmGwKNHrklTi57zBr7GQVNk/view?usp=drive_link). Total size is 1.31 GB. 
 ### Important Note
-Unloc is trained and tested under an Anaconda environment on Ubuntu 18.04 and using PyCharm. Therefore, it is highly recommended to use the Anaconda environment and PyCharm to run Unloc. Please install all the required packages using both pip and conda.
+Unloc is trained and tested under an Anaconda environment on Ubuntu 18.04 and using PyCharm. Therefore, it is highly recommended to use the Anaconda environment and PyCharm to run Unloc. Please install all the required packages using both pip and conda. A complete list of software packages installed to run Unloc is included in this GitHub package. Please check the file named 'List of installed packages for Unloc". 
 
 ## Oxford Radar RobotCar Dataset
-This dataset includes three different modalities: RGB camera images, Radar data, and point clouds from six sensors: left, right, and rear cameras; a Navtech CTS350-XFMCW Radar scanner; and left and right Velodyne HDL-32E LiDAR. NovAtel SPAN-CPT ALIGN inertial (INS) and GPS navigation systems are used to collect the ground-truth poses for this dataset. It covers a total of 280km of urban area, including more than 30 sequences, each captured over 9km. This dataset is large and challenging for localization due to the presence of a variety of foreground objects, such as people and cars. We use the same training and test sequences as Radarloc for our experiments on this dataset.
+We utilize Oxford Radar Robotcar dataset for our proposed multiple modality localization method. The dataset includes three different modalities: RGB camera images, Radar data, and point clouds from six sensors: left, right, and rear cameras; a Navtech CTS350-XFMCW Radar scanner; and left and right Velodyne HDL-32E LiDAR. NovAtel SPAN-CPT ALIGN inertial (INS) and GPS navigation systems are used to collect the ground-truth poses for this dataset. It covers a total of 280km of urban area, including more than 30 sequences, each captured over 9km. This dataset is large and challenging for localization due to the presence of a variety of foreground objects, such as people and cars. We use the same training and test sequences as Radarloc for our experiments on this dataset.
 Download the Oxford Radar RobotCar dataset from [here](https://oxford-robotics-institute.github.io/radar-robotcar-dataset/datasets).
 
 ## Citation
