@@ -66,7 +66,7 @@ pip install --no-index torch-scatter -f https://pytorch-geometric.com/whl/torch-
 ## Code and Trained Models
 Download the trained models and code of our paper from [here](https://drive.google.com/file/d/1hc778vA2NTmGwKNHrklTi57zBr7GQVNk/view?usp=drive_link). Total size is 1.31 GB. 
 ### Important Note
-Unloc is trained and tested under an Anaconda environment on Ubuntu 18.04 and using PyCharm. Therefore, it is highly recommended to use the Anaconda environment and PyCharm to run Unloc. Please install all the required packages using both pip and conda. A complete list of software packages installed to run Unloc is included in this GitHub package. Please check the file named 'List of installed packages for Unloc". 
+Unloc is trained and tested under an Anaconda environment on Ubuntu 18.04 and using PyCharm. Therefore, it is highly recommended to use the Anaconda environment and PyCharm to run Unloc. Please install all the required packages using both pip and conda. A complete list of software packages installed to run Unloc is included in this GitHub package. Please check the file named 'List of installed packages for Unloc". Please use Unloc-Train.py for training and Unloc-Test1.py or Unloc-Test2.py for testing as shown in Figure below.
 
 ## Datasets
 ### Oxford Radar RobotCar Dataset
