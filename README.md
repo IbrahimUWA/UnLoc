@@ -46,14 +46,18 @@ Schematics for common ground-truth generation for the different types of input s
 - pillow
 - numba 0.58.1
 - numpy 1.22.0                                       
-- torch-scatter
+- z
 - scikit-learn 1.3.0
 - scipy 1.8.1 
 - tqdm 
 - scikit-image
-### Installation of SPCONV 1.2.1
-  "git clone https://github.com/traveller59/spconv.git --recursive -b v1.2.1" <br> "cd spconv" -m "sudo apt-get install libboost-all-dev" <br> "python setup.py bdist_wheel" <br> "cd dist" <br> "and pip install spconv-1.2.1-cp38-cp38-linux_x86_64.whl"
-
+## Installation of packages for Unloc
+### PyTorch >= 1.8.0
+pip install torch==1.8.0+cu111 torchvision==0.9.0+cu111 torchaudio==0.8.0 -f https://download.pytorch.org/whl/torch_stable.html
+### SPCONV 1.2.1
+git clone https://github.com/traveller59/spconv.git --recursive -b v1.2.1 <br> cd spconv and sudo apt-get install libboost-all-dev <br> python setup.py bdist_wheel <br> cd dist and pip install spconv-1.2.1-cp38-cp38-linux_x86_64.whl
+### torch-scatter
+pip install --no-index torch-scatter -f https://pytorch-geometric.com/whl/torch-1.8.0+cu111.html
 
 ---
 
