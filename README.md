@@ -10,7 +10,7 @@ This repository is for UnLoc, a novel unified neural modeling approach for local
 2. [Requirements](#requirements)
 3. [Installation of packages for Unloc](#installation)
 4. [Code and Trained Models](#Code)
-5. [Oxford Radar RobotCar Dataset](#Dataset)
+5. [Datasets](#Datasets)
 6. [Citation](#citation)
 7. [Acknowledgements](#acknowledgements)
 
@@ -68,7 +68,8 @@ Download the trained models and code of our paper from [here](https://drive.goog
 ### Important Note
 Unloc is trained and tested under an Anaconda environment on Ubuntu 18.04 and using PyCharm. Therefore, it is highly recommended to use the Anaconda environment and PyCharm to run Unloc. Please install all the required packages using both pip and conda. A complete list of software packages installed to run Unloc is included in this GitHub package. Please check the file named 'List of installed packages for Unloc". 
 
-## Oxford Radar RobotCar Dataset
+## Datasets
+### Oxford Radar RobotCar Dataset
 We utilize Oxford Radar Robotcar dataset for our proposed multiple modality localization method. The dataset includes three different modalities: RGB camera images, Radar data, and point clouds from six sensors: left, right, and rear cameras; a Navtech CTS350-XFMCW Radar scanner; and left and right Velodyne HDL-32E LiDAR. NovAtel SPAN-CPT ALIGN inertial (INS) and GPS navigation systems are used to collect the ground-truth poses for this dataset. It covers a total of 280km of urban area, including more than 30 sequences, each captured over 9km. This dataset is large and challenging for localization due to the presence of a variety of foreground objects, such as people and cars. We use the same training and test sequences as Radarloc for our experiments on this dataset.
 The Oxford Radar RobotCar datasetcan be downloaded from [here](https://oxford-robotics-institute.github.io/radar-robotcar-dataset/datasets). Here is the structure of the subfolders for the Oxford Radar Robotcar dataset. Please download all these folders from the dataset. Each subfolder must contain the files and folders as depicted in the image below. <br>
 
@@ -82,8 +83,13 @@ Files and folders within each subfolder of the Oxford Radar Robotcar dataset.
   <img width="500" src="https://github.com/IbrahimUWA/UnLoc/blob/main/figs/Folders-within-each-folder.PNG">
 </p>
 
-
 Please download all the utility files for Oxford Radar dataset from [here](https://drive.google.com/file/d/1plCxw_Ek-W8u8HqXd4yJWZmYLUkHRUfM/view?usp=drive_link) and place in the Oxford Radar dataset folder.
+
+### Perth-WA dataset
+Perth-WA dataset is captured in the Central Business District (CBD), Perth, Western Australia. The dataset comprises a LiDAR map of 4-kilometre square area with 6DoF ground-truth per frame. The scenes include commercial structures, residential areas, food streets, complex routes, hospital buildings etc. The data is collected in three different two-hour sessions under various weather conditions. The training set comprises 20K frames of sparse and dense point clouds, and another 2.2K frames are used as the test set. The dataset is available online on IEEE data portal along with Data loader coded in Pytorch: [Perth-WA dataset](https://ieee-dataport.org/documents/perth-wa-localization-dataset-3d-point-cloud-maps)
+
+### ApolloSouthBay
+It is a comprehensive localization dataset collected in San Francisco, USA, utilizing an IMU-based system to record the ground-truth poses for the LiDAR frames. The dataset is captured in residential, urban, downtown area and highways. The dataset includes six routes: BaylandsToSeafood, ColumbiaPark,  SanJoseDowntown, SunnyvaleBigLoop, Highway237 and MathildaAVE. All these routes provide separate training and test sets. The dataset can be downloader from [here](https://developer.apollo.auto/southbay.html)
 
 ## Citation
 If you find the code helpful in your resarch or work, please cite the following papers.
