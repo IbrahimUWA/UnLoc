@@ -98,3 +98,6 @@ If you find the code helpful in your resarch or work, please cite the following 
   journal={arXiv preprint arXiv:2301.08957},
   year={2023}
 }
+
+## Acknowledgements
+We thank the authors of the following open-source codes: [Cylinder3D](https://github.com/xinge008/Cylinder3D), [SPCONV](https://github.com/traveller59/spconv), and [Slot Attention](https://github.com/lucidrains/slot-attention).
