@@ -65,7 +65,11 @@ pip install --no-index torch-scatter -f https://pytorch-geometric.com/whl/torch-
 ## Code and Trained Models
 Download the trained models and code of our paper from [here](https://drive.google.com/file/d/1hc778vA2NTmGwKNHrklTi57zBr7GQVNk/view?usp=drive_link). Total size is 1.31 GB. 
 ### Important Note
-Unloc is trained and tested under an Anaconda environment on Ubuntu 18.04 and using PyCharm. Therefore, it is highly recommended to use the same Anaconda environment and PyCharm to run Unloc. Please install all the required packages using both pip and conda.
+Unloc is trained and tested under an Anaconda environment on Ubuntu 18.04 and using PyCharm. Therefore, it is highly recommended to use the Anaconda environment and PyCharm to run Unloc. Please install all the required packages using both pip and conda.
+
+## Oxford Radar RobotCar Dataset
+This dataset includes three different modalities: RGB camera images, Radar data, and point clouds from six sensors: left, right, and rear cameras; a Navtech CTS350-XFMCW Radar scanner; and left and right Velodyne HDL-32E LiDAR. NovAtel SPAN-CPT ALIGN inertial (INS) and GPS navigation systems are used to collect the ground-truth poses for this dataset. It covers a total of 280km of urban area, including more than 30 sequences, each captured over 9km. This dataset is large and challenging for localization due to the presence of a variety of foreground objects, such as people and cars. We use the same training and test sequences as Radarloc for our experiments on this dataset.
+Download the Oxford Radar RobotCar dataset from [here](https://oxford-robotics-institute.github.io/radar-robotcar-dataset/datasets).
 
 ## Citation
 If you find the code helpful in your resarch or work, please cite the following papers.
