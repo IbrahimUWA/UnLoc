@@ -9,8 +9,8 @@ This repository is for UnLoc, a novel unified neural modeling approach for local
 1. [Introduction](#introduction)
 2. [Requirements](#requirements)
 3. [Installation of packages for Unloc](#installation)
-4. [Code and Trained Models](#Unloc code and models)
-5. [Oxford Radar RobotCar Dataset] (#Dataset)
+4. [Code and Trained Models](#Code)
+5. [Oxford Radar RobotCar Dataset](#Dataset)
 6. [Citation](#citation)
 7. [Acknowledgements](#acknowledgements)
 
