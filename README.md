@@ -8,8 +8,11 @@ This repository is for UnLoc, a novel unified neural modeling approach for local
 ## Contents
 1. [Introduction](#introduction)
 2. [Requirements](#requirements)
-3. [Citation](#citation)
-4. [Acknowledgements](#acknowledgements)
+3. [Installation of packages for Unloc](#installation)
+4. [Code and Trained Models](#Unloc code and models)
+5. [Oxford Radar RobotCar Dataset] (#Dataset)
+6. [Citation](#citation)
+7. [Acknowledgements](#acknowledgements)
 
 ## Introduction
 Localization is a fundamental task in robotics for autonomous navigation. Existing localization methods rely on a single input data modality or train several computational models to process different modalities. This leads to stringent computational requirements and sub-optimal results that fail to capitalize on the complementary information in other data streams. This paper proposes UnLoc, a novel unified neural modeling approach for localization with multi-sensor input in all weather conditions. Our multi-stream network can handle LiDAR, Camera and RADAR inputs for localization on demand, i.e., it can work with one or more input sensors, making it robust to sensor failure. UnLoc uses 3D sparse convolutions and cylindrical partitioning of the space to process LiDAR frames and implements ResNet blocks with a slot attention-based feature filtering module for the Radar and image modalities. We introduce a unique learnable modality encoding scheme to distinguish between the input sensor data. Our method is extensively evaluated on Oxford Radar RobotCar, ApolloSouthBay and Perth-WA datasets. The results ascertain the efficacy of our technique.
@@ -28,8 +31,6 @@ Radar sensor output in polar form (Left) and after transformation to Cartesian c
 <p align="center">
   <img width="500" src="https://github.com/IbrahimUWA/UnLoc/blob/main/figs/radarfig.PNG">
 </p>
-
-Table I: MEAN TRANSLATION (METERS) AND ROTATION (DEG.) ERRORS ON THE RADAR ROBOTCAR DATASET[11] COMPARED TO RADAR SLAM[32], ADAPTED ATLOC[28], RADARLOC[10], ATLOC[28], MAPNET[19], POSENET[7], DCP[33], VLAD[34] AND POINTLOC[5] .Table II: ABLATION STUDY ON TEST SEQUENCES OF OXFORD RADAR ROBOTCAR. MEAN TRANSLATION (METERS) AND ROTATION (DEG.) ERRORS ARE REPORTED FOR THE 3 MODALITIES SEPARATELY AND IN COMBINATIONS. L1/L2, C1/C2/C3 & R STAND FOR LIDAR LEFT/RIGHT, CAMERA LEFT/RIGHT/REAR & RADAR. WE REPORT RESULTS FOR C1 ONLY SINCE ALL THREE CAMERAS GIVE APPROXIMATELY SIMILAR ACCURACY.
 
 <p align="center">
   <img width="1000" src="https://github.com/IbrahimUWA/UnLoc/blob/main/figs/tables.PNG">
