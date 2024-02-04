@@ -70,7 +70,7 @@ Unloc is trained and tested under an Anaconda environment on Ubuntu 18.04 and us
 
 Using Pycharm with Anaconda environment to run Unloc for both training and testing.
 <p align="center">
-  <img width="800" src="https://github.com/IbrahimUWA/UnLoc/blob/main/figs/Unloc-Pycharm-Anaconda.png">
+  <img width="800" src="https://github.com/IbrahimUWA/UnLoc/blob/main/figs/Unloc-Pycharm-Anaconda.PNG">
 </p>
 
 ## Datasets
